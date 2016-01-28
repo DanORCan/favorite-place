@@ -117,10 +117,10 @@
             </objects>
             <point key="canvasLocation" x="368" y="490"/>
         </scene>
-        <!--View Controller-->
+        <!--DetailVC-->
         <scene sceneID="bwy-f2-gPt">
             <objects>
-                <viewController id="Ezd-Wl-x22" sceneMemberID="viewController">
+                <viewController id="Ezd-Wl-x22" customClass="DetailVC" customModule="favorite_place" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kKy-rE-hNv"/>
                         <viewControllerLayoutGuide type="bottom" id="6bw-u4-EZY"/>
@@ -145,18 +145,67 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="9xh-pL-ulj">
+                                <rect key="frame" x="20" y="197" width="560" height="383"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="LKa-LQ-bpW">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="POULATION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYe-ZN-T5J">
+                                                <rect key="frame" x="0.0" y="0.0" width="99" height="40"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="20,700" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2a-5d-V5B">
+                                                <rect key="frame" x="0.0" y="40" width="52" height="20"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="bwI-p9-JrG">
+                                        <rect key="frame" x="0.0" y="60" width="560" height="323"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="HISTORY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTJ-b2-0ZH">
+                                                <rect key="frame" x="0.0" y="0.0" width="76" height="125"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvr-22-zR8">
+                                                <rect key="frame" x="0.0" y="125" width="559" height="199"/>
+                                                <mutableString key="text">Yucca Valley is an incorporated town in San Bernardino County, California, United States. The population was 20,700 as of the 2010 census. Yucca Valley lies 17 miles (27 km) west of Twentynine Palms, 37 miles (60 km) north of Palm Springs, 89 miles (143 km) south of Barstow via State Route 247, 45 miles (72 km) southeast of Lucerne Valley and 55 miles (89 km) east of San Bernardino.
+
+Bordered in the west by the San Bernardino Mountains and in the south by the Joshua Tree National Park, the Yucca Valley community is located in the Mojave Desert at roughly 3,300 feet (1,000 m) above sea level.</mutableString>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Is-7S-jyF">
                                 <rect key="frame" x="20" y="20" width="70" height="30"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="backPressed:" destination="Ezd-Wl-x22" eventType="touchUpInside" id="ttT-cx-szf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="9xh-pL-ulj" firstAttribute="top" secondItem="to1-K0-9W8" secondAttribute="bottom" constant="45" id="EW6-D7-7pW"/>
+                            <constraint firstItem="9xh-pL-ulj" firstAttribute="leading" secondItem="72Q-sG-OOm" secondAttribute="leadingMargin" id="FZc-EX-r3E"/>
+                            <constraint firstItem="6bw-u4-EZY" firstAttribute="top" secondItem="9xh-pL-ulj" secondAttribute="bottom" constant="20" id="JLN-K2-MeS"/>
                             <constraint firstAttribute="trailing" secondItem="to1-K0-9W8" secondAttribute="trailing" id="RME-hT-KhY"/>
                             <constraint firstItem="ei3-Xy-3Ld" firstAttribute="centerX" secondItem="72Q-sG-OOm" secondAttribute="centerX" id="VvP-0i-r6v"/>
                             <constraint firstItem="to1-K0-9W8" firstAttribute="leading" secondItem="72Q-sG-OOm" secondAttribute="leading" id="Ygg-8h-CFt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9xh-pL-ulj" secondAttribute="trailing" id="ZYL-tz-r62"/>
                             <constraint firstItem="to1-K0-9W8" firstAttribute="top" secondItem="72Q-sG-OOm" secondAttribute="top" id="igy-yd-eae"/>
                             <constraint firstItem="ei3-Xy-3Ld" firstAttribute="top" secondItem="kKy-rE-hNv" secondAttribute="bottom" constant="45" id="qHD-oA-Izk"/>
                         </constraints>
